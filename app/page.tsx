@@ -8,7 +8,8 @@ import { Label } from '@/components/ui/label'
 import { Textarea } from '@/components/ui/textarea'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
 import { Badge } from '@/components/ui/badge'
-import { Star, Phone, Mail, MapPin, CheckCircle, Users, Zap, Award, ArrowRight } from 'lucide-react'
+import { Star, Phone, Mail, MapPin, CheckCircle, Users, Zap, Award, ArrowRight, ShoppingCart, Eye, Palette, Paintbrush, Flame, Scissors, Sparkles, Shirt } from 'lucide-react'
+import Link from 'next/link'
 
 export default function Home() {
   const [formData, setFormData] = useState({
@@ -123,96 +124,225 @@ export default function Home() {
         </div>
       </section>
 
+      {/* PearlTees Section */}
+      <section className="py-20 bg-gradient-to-br from-orange-500 via-orange-600 to-red-500 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h2 className="text-4xl font-bold mb-4" data-macaly="pearltees-section-title">
+              Discover PearlTees
+            </h2>
+            <p className="text-xl mb-8 max-w-3xl mx-auto" data-macaly="pearltees-section-description">
+              Your one-stop shop for premium ready-to-wear sportswear. Browse our curated collection of 
+              high-quality apparel available for immediate purchase at competitive outlet prices.
+            </p>
+            <div className="grid md:grid-cols-3 gap-8 mb-12">
+              <div className="text-center">
+                <div className="bg-white/20 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                  <Eye className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold mb-2">Premium Quality</h3>
+                <p className="text-orange-100">Carefully curated sportswear collection</p>
+              </div>
+              <div className="text-center">
+                <div className="bg-white/20 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                  <ShoppingCart className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold mb-2">Ready to Ship</h3>
+                <p className="text-orange-100">In-stock items for immediate delivery</p>
+              </div>
+              <div className="text-center">
+                <div className="bg-white/20 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                  <Badge className="h-8 w-8 text-white bg-transparent border-0 p-0">%</Badge>
+                </div>
+                <h3 className="text-lg font-semibold mb-2">Outlet Prices</h3>
+                <p className="text-orange-100">Premium quality at competitive prices</p>
+              </div>
+            </div>
+            <Link href="/pearltees">
+              <Button size="lg" className="bg-white text-orange-500 hover:bg-gray-100">
+                <ShoppingCart className="mr-2 h-5 w-5" />
+                Browse PearlTees Collection
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Services Section */}
       <section id="services" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4" data-macaly="services-title">
-              Our Services
+              Our Core Services
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From concept to completion, we offer comprehensive printing solutions for all your apparel needs
+              Comprehensive Solutions for All Your Apparel Needs
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <CardTitle className="text-blue-900">Sublimation Printing</CardTitle>
-                <CardDescription>
-                  Gone are the days of faded prints and uncomfortable fabrics. Sublimation printing is revolutionizing 
-                  sportswear with its durability, vibrant colors, and eco-friendly process.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-2">
-                  <div className="flex items-center">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
-                    <span>Fade-resistant colors</span>
-                  </div>
-                  <div className="flex items-center">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
-                    <span>Breathable fabric</span>
-                  </div>
-                  <div className="flex items-center">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
-                    <span>Eco-friendly process</span>
-                  </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Sublimation Printing */}
+            <div className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+              <div className="text-center mb-6">
+                <div className="w-20 h-20 mx-auto bg-gradient-to-br from-pink-500 to-orange-500 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <Palette className="h-10 w-10 text-white" />
                 </div>
-              </CardContent>
-            </Card>
-            
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <CardTitle className="text-blue-900">Screen Printing & Heat Transfer</CardTitle>
-                <CardDescription>
-                  Choosing the right printing method for your sports apparel can be confusing. We offer screen printing 
-                  and heat transfer solutions tailored to your specific needs.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-2">
-                  <div className="flex items-center">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
-                    <span>Bulk order efficiency</span>
-                  </div>
-                  <div className="flex items-center">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
-                    <span>Cost-effective solutions</span>
-                  </div>
-                  <div className="flex items-center">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
-                    <span>Versatile applications</span>
-                  </div>
+                <h3 className="text-2xl font-bold text-blue-900 mb-3">Sublimation Printing</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  High-speed, efficient printing for vibrant, full-color designs that last
+                </p>
+              </div>
+              <div className="space-y-3">
+                <div className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                  <span className="text-gray-700">Fade-resistant colors</span>
                 </div>
-              </CardContent>
-            </Card>
-            
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <CardTitle className="text-blue-900">Custom Team Design</CardTitle>
-                <CardDescription>
-                  Your jersey represents your team spirit. From choosing the right colors to deciding on font styles, 
-                  we walk you through creating custom sportswear that stands out.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-2">
-                  <div className="flex items-center">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
-                    <span>Personalized consultation</span>
-                  </div>
-                  <div className="flex items-center">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
-                    <span>Logo & number customization</span>
-                  </div>
-                  <div className="flex items-center">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
-                    <span>Team identity development</span>
-                  </div>
+                <div className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                  <span className="text-gray-700">Breathable fabric</span>
                 </div>
-              </CardContent>
-            </Card>
+                <div className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                  <span className="text-gray-700">Eco-friendly process</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Screen Printing */}
+            <div className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+              <div className="text-center mb-6">
+                <div className="w-20 h-20 mx-auto bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <Paintbrush className="h-10 w-10 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-blue-900 mb-3">Screen Printing</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Meticulously crafted process creating long-lasting and visually stunning masterpieces on fabric
+                </p>
+              </div>
+              <div className="space-y-3">
+                <div className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                  <span className="text-gray-700">Bulk order efficiency</span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                  <span className="text-gray-700">Cost-effective solutions</span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                  <span className="text-gray-700">Versatile applications</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Heat Transfer */}
+            <div className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+              <div className="text-center mb-6">
+                <div className="w-20 h-20 mx-auto bg-gradient-to-br from-red-500 to-orange-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <Flame className="h-10 w-10 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-blue-900 mb-3">Heat Transfer</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Ideal for multi-color designs, ensuring sharp details and vibrant colors for your apparel
+                </p>
+              </div>
+              <div className="space-y-3">
+                <div className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                  <span className="text-gray-700">Perfect for small quantities</span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                  <span className="text-gray-700">Detailed designs</span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                  <span className="text-gray-700">Quick turnaround</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Custom Embroidery */}
+            <div className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+              <div className="text-center mb-6">
+                <div className="w-20 h-20 mx-auto bg-gradient-to-br from-teal-500 to-blue-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <Shirt className="h-10 w-10 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-blue-900 mb-3">Custom Embroidery</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Perfect for adding a premium touch to caps, polos, and uniforms with your company logo
+                </p>
+              </div>
+              <div className="space-y-3">
+                <div className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                  <span className="text-gray-700">Personalized consultation</span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                  <span className="text-gray-700">Logo & number customization</span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                  <span className="text-gray-700">Premium finish quality</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Stitching & Sampling */}
+            <div className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+              <div className="text-center mb-6">
+                <div className="w-20 h-20 mx-auto bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <Scissors className="h-10 w-10 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-blue-900 mb-3">Stitching & Sampling</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Expert tailoring and sampling services with precision and care in every detail
+                </p>
+              </div>
+              <div className="space-y-3">
+                <div className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                  <span className="text-gray-700">Expert tailoring</span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                  <span className="text-gray-700">Sample development</span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                  <span className="text-gray-700">Quality assurance</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Sticker Printing */}
+            <div className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+              <div className="text-center mb-6">
+                <div className="w-20 h-20 mx-auto bg-gradient-to-br from-yellow-500 to-orange-500 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <Sparkles className="h-10 w-10 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-blue-900 mb-3">Sticker Printing</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  High-resolution, full-color sticker printing to showcase your designs effectively
+                </p>
+              </div>
+              <div className="space-y-3">
+                <div className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                  <span className="text-gray-700">High-resolution printing</span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                  <span className="text-gray-700">Waterproof materials</span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                  <span className="text-gray-700">Custom shapes & sizes</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -308,9 +438,11 @@ export default function Home() {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <Button variant="outline" className="text-blue-900 border-blue-900 hover:bg-blue-900 hover:text-white">
-                  Read More
-                </Button>
+                <Link href="/blog/sublimation-printing-future">
+                  <Button variant="outline" className="text-blue-900 border-blue-900 hover:bg-blue-900 hover:text-white">
+                    Read More
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
             
@@ -324,9 +456,11 @@ export default function Home() {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <Button variant="outline" className="text-blue-900 border-blue-900 hover:bg-blue-900 hover:text-white">
-                  Read More
-                </Button>
+                <Link href="/blog/screen-printing-vs-heat-transfer">
+                  <Button variant="outline" className="text-blue-900 border-blue-900 hover:bg-blue-900 hover:text-white">
+                    Read More
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
           </div>
