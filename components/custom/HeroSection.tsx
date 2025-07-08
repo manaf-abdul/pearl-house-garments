@@ -43,7 +43,8 @@ const HeroSection = () => {
       {/* Background Video (or Image Slideshow) */}
       <video
         className="absolute inset-0 w-full h-full object-cover z-0"
-        src="https://videos.pexels.com/video-files/29780963/29780963-hd_1920_1080_30fps.mp4" // Replace with your desired video
+         src="/videos/hero-2.mp4"
+        // src="https://videos.pexels.com/video-files/29780963/29780963-hd_1920_1080_30fps.mp4" // Replace with your desired video
         autoPlay
         loop
         muted
