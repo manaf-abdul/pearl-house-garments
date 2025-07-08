@@ -5,6 +5,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge'
 import { ArrowLeft, ShoppingCart, Eye } from 'lucide-react'
 import Link from 'next/link'
+import PearlTeeHeroSection from '@/components/custom/PearlTeeHeroSection'
+import PearlTeeNewArrivals from '@/components/custom/PearlTeeNewArrivals'
+import PearlTeeBestSellers from '@/components/custom/PearlTeeBestSellers'
+import PearlTeeSpecialOffers from '@/components/custom/PearlTeeSpecialOffers'
 
 export default function PearlTees() {
   const cricketItems = [
@@ -80,9 +84,9 @@ export default function PearlTees() {
               </Link>
             </div>
             <div className="flex items-center space-x-4">
-              <img 
-                src="https://assets.macaly-user-data.dev/i7nrqdl37g1kttgs6uyyg5vw/e933vqask62ero33pi5dgp9n/2BoBoI1V0VzJz3klP7HpI/logo-4-.png" 
-                alt="Pearl-Tees" 
+              <img
+                src="https://assets.macaly-user-data.dev/i7nrqdl37g1kttgs6uyyg5vw/e933vqask62ero33pi5dgp9n/2BoBoI1V0VzJz3klP7HpI/logo-4-.png"
+                alt="Pearl-Tees"
                 className="h-8 w-auto"
                 data-macaly="pearltees-logo"
               />
@@ -95,21 +99,7 @@ export default function PearlTees() {
       </nav>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-orange-500 via-orange-600 to-red-500 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4" data-macaly="pearltees-hero-title">
-            PearlTees: The Official Outlet
-          </h2>
-          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto" data-macaly="pearltees-hero-subtitle">
-            Discover our premium collection of ready-to-wear sportswear and custom apparel. 
-            Quality designs from Pearl House Garments at outlet prices.
-          </p>
-          <Button size="lg" className="bg-white text-orange-500 hover:bg-gray-100">
-            <ShoppingCart className="mr-2 h-5 w-5" />
-            Shop Now
-          </Button>
-        </div>
-      </section>
+      <PearlTeeHeroSection />
 
       {/* Introduction */}
       <section className="py-16 bg-gray-50">
@@ -119,12 +109,12 @@ export default function PearlTees() {
               Premium Sportswear Collection
             </h3>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto" data-macaly="pearltees-intro-description">
-              PearlTees is where you'll find our carefully curated collection of high-quality, ready-to-wear apparel. 
-              Each piece represents the same exceptional craftsmanship and attention to detail that Pearl House Garments 
+              PearlTees is where you'll find our carefully curated collection of high-quality, ready-to-wear apparel.
+              Each piece represents the same exceptional craftsmanship and attention to detail that Pearl House Garments
               is known for, now available for immediate purchase.
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="bg-orange-500 rounded-full p-6 w-20 h-20 mx-auto mb-4 flex items-center justify-center">
@@ -133,7 +123,7 @@ export default function PearlTees() {
               <h4 className="text-xl font-semibold mb-2">Quality Guaranteed</h4>
               <p className="text-gray-600">Every item meets our strict quality standards</p>
             </div>
-            
+
             <div className="text-center">
               <div className="bg-blue-900 rounded-full p-6 w-20 h-20 mx-auto mb-4 flex items-center justify-center">
                 <ShoppingCart className="h-8 w-8 text-white" />
@@ -141,7 +131,7 @@ export default function PearlTees() {
               <h4 className="text-xl font-semibold mb-2">Ready to Ship</h4>
               <p className="text-gray-600">In-stock items available for immediate delivery</p>
             </div>
-            
+
             <div className="text-center">
               <div className="bg-red-500 rounded-full p-6 w-20 h-20 mx-auto mb-4 flex items-center justify-center">
                 <Badge className="h-8 w-8 text-white bg-transparent border-0 p-0">%</Badge>
@@ -153,8 +143,12 @@ export default function PearlTees() {
         </div>
       </section>
 
+      <PearlTeeNewArrivals />
+      <PearlTeeBestSellers />
+      <PearlTeeSpecialOffers />
+
       {/* Cricket Collection */}
-      <section className="py-16 bg-white">
+      {/* <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between mb-12">
             <h3 className="text-3xl font-bold text-gray-900">Cricket Collection</h3>
@@ -162,13 +156,13 @@ export default function PearlTees() {
               {cricketItems.length} Items
             </Badge>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {cricketItems.map((item) => (
               <Card key={item.code} className="overflow-hidden hover:shadow-lg transition-shadow">
                 <div className="aspect-square overflow-hidden">
-                  <img 
-                    src={item.image} 
+                  <img
+                    src={item.image}
                     alt={item.name}
                     className="w-full h-full object-cover hover:scale-105 transition-transform"
                     data-macaly={`cricket-item-${item.code}`}
@@ -187,7 +181,7 @@ export default function PearlTees() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-600 mb-4">{item.description}</p>
-                  <Button 
+                  <Button
                     onClick={() => handleInquiry(item.code)}
                     className="w-full bg-orange-500 hover:bg-orange-600"
                   >
@@ -198,10 +192,10 @@ export default function PearlTees() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Football Collection */}
-      <section className="py-16 bg-gray-50">
+      {/* <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between mb-12">
             <h3 className="text-3xl font-bold text-gray-900">Football Collection</h3>
@@ -209,13 +203,13 @@ export default function PearlTees() {
               {footballItems.length} Items
             </Badge>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {footballItems.map((item) => (
               <Card key={item.code} className="overflow-hidden hover:shadow-lg transition-shadow">
                 <div className="aspect-square overflow-hidden">
-                  <img 
-                    src={item.image} 
+                  <img
+                    src={item.image}
                     alt={item.name}
                     className="w-full h-full object-cover hover:scale-105 transition-transform"
                     data-macaly={`football-item-${item.code}`}
@@ -234,7 +228,7 @@ export default function PearlTees() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-600 mb-4">{item.description}</p>
-                  <Button 
+                  <Button
                     onClick={() => handleInquiry(item.code)}
                     className="w-full bg-orange-500 hover:bg-orange-600"
                   >
@@ -245,10 +239,10 @@ export default function PearlTees() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Volleyball Collection */}
-      <section className="py-16 bg-white">
+      {/* <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between mb-12">
             <h3 className="text-3xl font-bold text-gray-900">Volleyball Collection</h3>
@@ -256,13 +250,13 @@ export default function PearlTees() {
               {volleyballItems.length} Items
             </Badge>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {volleyballItems.map((item) => (
               <Card key={item.code} className="overflow-hidden hover:shadow-lg transition-shadow">
                 <div className="aspect-square overflow-hidden">
-                  <img 
-                    src={item.image} 
+                  <img
+                    src={item.image}
                     alt={item.name}
                     className="w-full h-full object-cover hover:scale-105 transition-transform"
                     data-macaly={`volleyball-item-${item.code}`}
@@ -281,7 +275,7 @@ export default function PearlTees() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-600 mb-4">{item.description}</p>
-                  <Button 
+                  <Button
                     onClick={() => handleInquiry(item.code)}
                     className="w-full bg-orange-500 hover:bg-orange-600"
                   >
@@ -292,10 +286,10 @@ export default function PearlTees() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Basketball Collection */}
-      <section className="py-16 bg-gray-50">
+      {/* <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between mb-12">
             <h3 className="text-3xl font-bold text-gray-900">Basketball Collection</h3>
@@ -303,13 +297,13 @@ export default function PearlTees() {
               {basketballItems.length} Items
             </Badge>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {basketballItems.map((item) => (
               <Card key={item.code} className="overflow-hidden hover:shadow-lg transition-shadow">
                 <div className="aspect-square overflow-hidden">
-                  <img 
-                    src={item.image} 
+                  <img
+                    src={item.image}
                     alt={item.name}
                     className="w-full h-full object-cover hover:scale-105 transition-transform"
                     data-macaly={`basketball-item-${item.code}`}
@@ -328,7 +322,7 @@ export default function PearlTees() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-600 mb-4">{item.description}</p>
-                  <Button 
+                  <Button
                     onClick={() => handleInquiry(item.code)}
                     className="w-full bg-orange-500 hover:bg-orange-600"
                   >
@@ -339,7 +333,7 @@ export default function PearlTees() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Call to Action */}
       <section className="py-16 bg-blue-900 text-white">
@@ -348,7 +342,7 @@ export default function PearlTees() {
             Need Custom Designs?
           </h3>
           <p className="text-xl mb-8 max-w-3xl mx-auto" data-macaly="pearltees-cta-description">
-            Don't see exactly what you're looking for? Our parent company, Pearl House Garments, 
+            Don't see exactly what you're looking for? Our parent company, Pearl House Garments,
             offers full custom design and printing services for teams and businesses.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -371,16 +365,16 @@ export default function PearlTees() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
-              <img 
-                src="https://assets.macaly-user-data.dev/i7nrqdl37g1kttgs6uyyg5vw/e933vqask62ero33pi5dgp9n/2BoBoI1V0VzJz3klP7HpI/logo-4-.png" 
-                alt="Pearl-Tees" 
+              <img
+                src="https://assets.macaly-user-data.dev/i7nrqdl37g1kttgs6uyyg5vw/e933vqask62ero33pi5dgp9n/2BoBoI1V0VzJz3klP7HpI/logo-4-.png"
+                alt="Pearl-Tees"
                 className="h-8 w-auto mb-4"
               />
               <p className="text-gray-400">
                 The official outlet of Pearl House Garments, offering premium sportswear at competitive prices.
               </p>
             </div>
-            
+
             <div>
               <h4 className="text-lg font-semibold mb-4">Collections</h4>
               <ul className="space-y-2 text-gray-400">
@@ -390,7 +384,7 @@ export default function PearlTees() {
                 <li>Basketball</li>
               </ul>
             </div>
-            
+
             <div>
               <h4 className="text-lg font-semibold mb-4">Support</h4>
               <ul className="space-y-2 text-gray-400">
@@ -400,7 +394,7 @@ export default function PearlTees() {
                 <li>Returns</li>
               </ul>
             </div>
-            
+
             <div>
               <h4 className="text-lg font-semibold mb-4">Pearl House Garments</h4>
               <ul className="space-y-2 text-gray-400">
@@ -411,7 +405,7 @@ export default function PearlTees() {
               </ul>
             </div>
           </div>
-          
+
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
             <p>&copy; 2024 PearlTees - A Division of Pearl House Garments. All rights reserved.</p>
           </div>

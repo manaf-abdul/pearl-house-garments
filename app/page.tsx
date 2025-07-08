@@ -12,6 +12,10 @@ import { Star, Phone, Mail, MapPin, CheckCircle, Users, Zap, Award, ArrowRight, 
 import Link from 'next/link'
 import Navbar from '@/components/custom/Navbar'
 import HeroSection from '@/components/custom/HeroSection'
+import TrustedPartners from '@/components/custom/TrustedPartners'
+import LocationContact from '@/components/custom/LocationContact'
+import CustomWear from '@/components/custom/CustomWear'
+import PearlTeeSlider from '@/components/custom/PearlTeeSlider'
 
 export default function Home() {
   const [formData, setFormData] = useState({
@@ -55,7 +59,7 @@ export default function Home() {
           </div>
         </div>
       </nav> */}
-      <Navbar/>
+      <Navbar />
 
       {/* Hero Section */}
       {/* <section id="home" className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white py-20">
@@ -84,7 +88,7 @@ export default function Home() {
           </div>
         </div>
       </section> */}
-      <HeroSection/>
+      <HeroSection />
 
       {/* About Section */}
       <section className="py-20 bg-gray-50">
@@ -94,12 +98,12 @@ export default function Home() {
               About Pearl House Garments
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto" data-macaly="about-description">
-              Based in Ajman, UAE, we are your trusted partner for premium custom sportswear and apparel printing. 
-              With years of experience in the industry, we combine cutting-edge technology with traditional craftsmanship 
+              Based in Ajman, UAE, we are your trusted partner for premium custom sportswear and apparel printing.
+              With years of experience in the industry, we combine cutting-edge technology with traditional craftsmanship
               to deliver exceptional results that exceed expectations.
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="bg-blue-900 rounded-full p-6 w-20 h-20 mx-auto mb-4 flex items-center justify-center">
@@ -108,7 +112,7 @@ export default function Home() {
               <h3 className="text-xl font-semibold mb-2">Expert Team</h3>
               <p className="text-gray-600">Skilled professionals dedicated to bringing your vision to life</p>
             </div>
-            
+
             <div className="text-center">
               <div className="bg-orange-500 rounded-full p-6 w-20 h-20 mx-auto mb-4 flex items-center justify-center">
                 <Zap className="h-8 w-8 text-white" />
@@ -116,7 +120,7 @@ export default function Home() {
               <h3 className="text-xl font-semibold mb-2">Fast Turnaround</h3>
               <p className="text-gray-600">Quick delivery without compromising on quality</p>
             </div>
-            
+
             <div className="text-center">
               <div className="bg-blue-500 rounded-full p-6 w-20 h-20 mx-auto mb-4 flex items-center justify-center">
                 <Award className="h-8 w-8 text-white" />
@@ -129,14 +133,14 @@ export default function Home() {
       </section>
 
       {/* PearlTees Section */}
-      <section className="py-20 bg-gradient-to-br from-orange-500 via-orange-600 to-red-500 text-white">
+      {/* <section className="py-20 bg-gradient-to-br from-orange-500 via-orange-600 to-red-500 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-4xl font-bold mb-4" data-macaly="pearltees-section-title">
               Discover PearlTees
             </h2>
             <p className="text-xl mb-8 max-w-3xl mx-auto" data-macaly="pearltees-section-description">
-              Your one-stop shop for premium ready-to-wear sportswear. Browse our curated collection of 
+              Your one-stop shop for premium ready-to-wear sportswear. Browse our curated collection of
               high-quality apparel available for immediate purchase at competitive outlet prices.
             </p>
             <div className="grid md:grid-cols-3 gap-8 mb-12">
@@ -171,7 +175,8 @@ export default function Home() {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
+      <PearlTeeSlider />
 
       {/* Services Section */}
       <section id="services" className="py-20 bg-white">
@@ -184,7 +189,7 @@ export default function Home() {
               Comprehensive Solutions for All Your Apparel Needs
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Sublimation Printing */}
             <div className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
@@ -352,7 +357,7 @@ export default function Home() {
       </section>
 
       {/* Portfolio Section */}
-      <section id="portfolio" className="py-20 bg-gray-50">
+      {/* <section id="portfolio" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4" data-macaly="portfolio-title">
@@ -362,12 +367,12 @@ export default function Home() {
               Explore our diverse portfolio of custom sportswear and apparel projects
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-              <img 
-                src="https://images.pexels.com/photos/29780963/pexels-photo-29780963/free-photo-of-energetic-football-match-with-players-in-orange-and-white-vibrant-stadium-backdrop.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=2" 
-                alt="Football Team Uniforms" 
+              <img
+                src="https://images.pexels.com/photos/29780963/pexels-photo-29780963/free-photo-of-energetic-football-match-with-players-in-orange-and-white-vibrant-stadium-backdrop.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=2"
+                alt="Football Team Uniforms"
                 className="w-full h-48 object-cover"
                 data-macaly="portfolio-image-1"
               />
@@ -376,11 +381,11 @@ export default function Home() {
                 <p className="text-sm text-gray-600">Custom team uniforms with sublimation printing</p>
               </div>
             </div>
-            
+
             <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-              <img 
-                src="https://images.pexels.com/photos/29697854/pexels-photo-29697854/free-photo-of-group-of-cheerful-cheerleaders-posing-with-vibrant-pompoms-wearing-matching-uniforms.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=2" 
-                alt="Cheerleader Uniforms" 
+              <img
+                src="https://images.pexels.com/photos/29697854/pexels-photo-29697854/free-photo-of-group-of-cheerful-cheerleaders-posing-with-vibrant-pompoms-wearing-matching-uniforms.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=2"
+                alt="Cheerleader Uniforms"
                 className="w-full h-48 object-cover"
                 data-macaly="portfolio-image-2"
               />
@@ -389,11 +394,11 @@ export default function Home() {
                 <p className="text-sm text-gray-600">High-quality team apparel with custom logos</p>
               </div>
             </div>
-            
+
             <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-              <img 
-                src="https://images.pexels.com/photos/29697853/pexels-photo-29697853/free-photo-of-energetic-cheerleaders-in-uniform-holding-pom-poms-ready-for-performance.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=2" 
-                alt="Team Apparel" 
+              <img
+                src="https://images.pexels.com/photos/29697853/pexels-photo-29697853/free-photo-of-energetic-cheerleaders-in-uniform-holding-pom-poms-ready-for-performance.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=2"
+                alt="Team Apparel"
                 className="w-full h-48 object-cover"
                 data-macaly="portfolio-image-3"
               />
@@ -402,11 +407,11 @@ export default function Home() {
                 <p className="text-sm text-gray-600">Professional uniforms with heat transfer printing</p>
               </div>
             </div>
-            
+
             <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-              <img 
-                src="https://images.pexels.com/photos/29780965/pexels-photo-29780965/free-photo-of-smiling-boys-in-soccer-jerseys-gather-outdoors-at-dusk-fostering-teamwork.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=2" 
-                alt="Soccer Team" 
+              <img
+                src="https://images.pexels.com/photos/29780965/pexels-photo-29780965/free-photo-of-smiling-boys-in-soccer-jerseys-gather-outdoors-at-dusk-fostering-teamwork.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=2"
+                alt="Soccer Team"
                 className="w-full h-48 object-cover"
                 data-macaly="portfolio-image-4"
               />
@@ -417,7 +422,9 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
+
+      <CustomWear />
 
       {/* Blog Section */}
       <section id="blog" className="py-20 bg-white">
@@ -430,14 +437,14 @@ export default function Home() {
               Stay informed with our latest articles about sportswear trends and printing techniques
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 gap-8">
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
                 <Badge className="w-fit mb-2">Industry Trends</Badge>
                 <CardTitle className="text-blue-900">The Future of Sportswear: Why Sublimation Printing is Taking Over</CardTitle>
                 <CardDescription>
-                  Gone are the days of faded prints and uncomfortable fabrics. Sublimation printing is revolutionizing 
+                  Gone are the days of faded prints and uncomfortable fabrics. Sublimation printing is revolutionizing
                   sportswear with its durability, vibrant colors, and eco-friendly process.
                 </CardDescription>
               </CardHeader>
@@ -449,13 +456,13 @@ export default function Home() {
                 </Link>
               </CardContent>
             </Card>
-            
+
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
                 <Badge className="w-fit mb-2">Printing Guide</Badge>
                 <CardTitle className="text-blue-900">Screen Printing vs. Heat Transfer: What's Best for Your Sports Gear?</CardTitle>
                 <CardDescription>
-                  Choosing the right printing method for your sports apparel can be confusing. We offer screen printing 
+                  Choosing the right printing method for your sports apparel can be confusing. We offer screen printing
                   and heat transfer solutions tailored to your needs.
                 </CardDescription>
               </CardHeader>
@@ -482,7 +489,7 @@ export default function Home() {
               Don't just take our word for it - hear from our satisfied customers
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
             <Card>
               <CardContent className="pt-6">
@@ -505,7 +512,7 @@ export default function Home() {
                 </div>
               </CardContent>
             </Card>
-            
+
             <Card>
               <CardContent className="pt-6">
                 <div className="flex items-center mb-4">
@@ -527,7 +534,7 @@ export default function Home() {
                 </div>
               </CardContent>
             </Card>
-            
+
             <Card>
               <CardContent className="pt-6">
                 <div className="flex items-center mb-4">
@@ -564,39 +571,39 @@ export default function Home() {
               Find answers to common questions about our services and processes
             </p>
           </div>
-          
+
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="item-1">
               <AccordionTrigger className="text-left">What is sublimation printing?</AccordionTrigger>
               <AccordionContent>
-                Sublimation printing is a process where heat and pressure are used to transfer dye directly into fabric fibers. 
+                Sublimation printing is a process where heat and pressure are used to transfer dye directly into fabric fibers.
                 This creates vibrant, long-lasting prints that won't fade, crack, or peel over time.
               </AccordionContent>
             </AccordionItem>
-            
+
             <AccordionItem value="item-2">
               <AccordionTrigger className="text-left">How long does it take to complete an order?</AccordionTrigger>
               <AccordionContent>
-                Our typical turnaround time is 7-14 business days, depending on the complexity and quantity of your order. 
+                Our typical turnaround time is 7-14 business days, depending on the complexity and quantity of your order.
                 Rush orders can be accommodated with additional fees.
               </AccordionContent>
             </AccordionItem>
-            
+
             <AccordionItem value="item-3">
               <AccordionTrigger className="text-left">Do you offer design services?</AccordionTrigger>
               <AccordionContent>
-                Yes! Our experienced design team can help create custom logos, artwork, and complete uniform designs. 
+                Yes! Our experienced design team can help create custom logos, artwork, and complete uniform designs.
                 We work closely with you to ensure your vision comes to life.
               </AccordionContent>
             </AccordionItem>
-            
+
             <AccordionItem value="item-4">
               <AccordionTrigger className="text-left">What's the minimum order quantity?</AccordionTrigger>
               <AccordionContent>
                 Our minimum order quantities vary by product and printing method. Contact us for specific details based on your needs.
               </AccordionContent>
             </AccordionItem>
-            
+
             <AccordionItem value="item-5">
               <AccordionTrigger className="text-left">Do you ship internationally?</AccordionTrigger>
               <AccordionContent>
@@ -606,9 +613,10 @@ export default function Home() {
           </Accordion>
         </div>
       </section>
-
+      <TrustedPartners />
+      <LocationContact />
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-gray-50">
+      {/* <section id="contact" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4" data-macaly="contact-title">
@@ -618,7 +626,7 @@ export default function Home() {
               Ready to bring your vision to life? Contact us today for a free consultation and quote
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 gap-8">
             <div>
               <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
@@ -630,7 +638,7 @@ export default function Home() {
                     <p className="text-gray-600">Ajman, United Arab Emirates</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center">
                   <Phone className="h-6 w-6 text-blue-900 mr-3" />
                   <div>
@@ -638,7 +646,7 @@ export default function Home() {
                     <p className="text-gray-600">+971 XXX XXX XXX</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center">
                   <Mail className="h-6 w-6 text-blue-900 mr-3" />
                   <div>
@@ -647,7 +655,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              
+
               <div className="mt-8">
                 <h4 className="font-semibold mb-4">Business Hours</h4>
                 <div className="space-y-2 text-gray-600">
@@ -657,7 +665,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            
+
             <Card>
               <CardHeader>
                 <CardTitle>Send us a Message</CardTitle>
@@ -670,45 +678,45 @@ export default function Home() {
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
                       <Label htmlFor="name">Name</Label>
-                      <Input 
+                      <Input
                         id="name"
                         value={formData.name}
-                        onChange={(e) => setFormData({...formData, name: e.target.value})}
+                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         required
                       />
                     </div>
                     <div>
                       <Label htmlFor="email">Email</Label>
-                      <Input 
+                      <Input
                         id="email"
                         type="email"
                         value={formData.email}
-                        onChange={(e) => setFormData({...formData, email: e.target.value})}
+                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         required
                       />
                     </div>
                   </div>
-                  
+
                   <div>
                     <Label htmlFor="phone">Phone</Label>
-                    <Input 
+                    <Input
                       id="phone"
                       value={formData.phone}
-                      onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     />
                   </div>
-                  
+
                   <div>
                     <Label htmlFor="message">Message</Label>
-                    <Textarea 
+                    <Textarea
                       id="message"
                       rows={4}
                       value={formData.message}
-                      onChange={(e) => setFormData({...formData, message: e.target.value})}
+                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       required
                     />
                   </div>
-                  
+
                   <Button type="submit" className="w-full bg-orange-500 hover:bg-orange-600">
                     Send Message
                   </Button>
@@ -717,23 +725,23 @@ export default function Home() {
             </Card>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
-              <img 
-                src="https://assets.macaly-user-data.dev/i7nrqdl37g1kttgs6uyyg5vw/e933vqask62ero33pi5dgp9n/aH-DrnLScU6SxzsqZYpsi/logo-1-.png" 
-                alt="Pearl House Garments" 
+              <img
+                src="https://assets.macaly-user-data.dev/i7nrqdl37g1kttgs6uyyg5vw/e933vqask62ero33pi5dgp9n/aH-DrnLScU6SxzsqZYpsi/logo-1-.png"
+                alt="Pearl House Garments"
                 className="h-8 w-auto mb-4"
               />
               <p className="text-gray-400">
                 Leading specialists in custom sportswear and apparel printing in UAE.
               </p>
             </div>
-            
+
             <div>
               <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
               <ul className="space-y-2 text-gray-400">
@@ -744,7 +752,7 @@ export default function Home() {
                 <li><a href="#contact" className="hover:text-white transition-colors">Contact</a></li>
               </ul>
             </div>
-            
+
             <div>
               <h4 className="text-lg font-semibold mb-4">Services</h4>
               <ul className="space-y-2 text-gray-400">
@@ -754,7 +762,7 @@ export default function Home() {
                 <li>Custom Design</li>
               </ul>
             </div>
-            
+
             <div>
               <h4 className="text-lg font-semibold mb-4">Connect</h4>
               <ul className="space-y-2 text-gray-400">
@@ -764,7 +772,7 @@ export default function Home() {
               </ul>
             </div>
           </div>
-          
+
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
             <p>&copy; 2024 Pearl House Garments. All rights reserved.</p>
           </div>
