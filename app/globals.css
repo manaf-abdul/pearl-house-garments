@@ -85,3 +85,6 @@
 body > nextjs-portal {
   display: none;
 }
+.animation-delay-3s {
+  animation-delay: 3s;
+}

@@ -10,6 +10,8 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { Badge } from '@/components/ui/badge'
 import { Star, Phone, Mail, MapPin, CheckCircle, Users, Zap, Award, ArrowRight, ShoppingCart, Eye, Palette, Paintbrush, Flame, Scissors, Sparkles, Shirt } from 'lucide-react'
 import Link from 'next/link'
+import Navbar from '@/components/custom/Navbar'
+import HeroSection from '@/components/custom/HeroSection'
 
 export default function Home() {
   const [formData, setFormData] = useState({
@@ -28,7 +30,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
-      <nav className="bg-white shadow-sm border-b sticky top-0 z-50">
+      {/* <nav className="bg-white shadow-sm border-b sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
@@ -52,10 +54,11 @@ export default function Home() {
             </Button>
           </div>
         </div>
-      </nav>
+      </nav> */}
+      <Navbar/>
 
       {/* Hero Section */}
-      <section id="home" className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white py-20">
+      {/* <section id="home" className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white py-20">
         <div className="absolute inset-0 bg-black/40"></div>
         <div 
           className="absolute inset-0 bg-cover bg-center"
@@ -80,7 +83,8 @@ export default function Home() {
             </Button>
           </div>
         </div>
-      </section>
+      </section> */}
+      <HeroSection/>
 
       {/* About Section */}
       <section className="py-20 bg-gray-50">
