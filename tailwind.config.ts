@@ -16,8 +16,13 @@ const config: Config = {
           
 				'gradient-primary': 'var(--gradient-primary)',
 				'gradient-fashion': 'var(--gradient-fashion)',
-				'gradient-elegant': 'var(--gradient-elegant)'
+				'gradient-elegant': 'var(--gradient-elegant)',
+        'gradient-admin': 'var(--gradient-admin)',
       },
+      boxShadow: {
+				'admin': 'var(--shadow-admin)',
+				'card': 'var(--shadow-card)'
+			},
       borderRadius: {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',

@@ -12,12 +12,7 @@ const nextConfig = {
   },
   images: { unoptimized: true },
   devIndicators: false,
-  allowedDevOrigins: [
-    "*.macaly.dev",
-    "*.macaly.app",
-    "*.macaly-app.com",
-    "*.macaly-user-data.dev",
-  ],
+  allowedDevOrigins: ['*'],
 };
 
 module.exports = nextConfig;

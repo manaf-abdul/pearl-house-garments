@@ -41,13 +41,20 @@
     --radius: 0.75rem;
 
     /* Fashion-focused gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    /* --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent))); */
+     --gradient-primary: linear-gradient(135deg, hsl(262 83% 58%), hsl(262 100% 78%));
+    
     --gradient-fashion: linear-gradient(135deg, hsl(320 85% 60%), hsl(340 82% 52%), hsl(350 89% 60%));
     --gradient-elegant: linear-gradient(180deg, hsl(0 0% 100%), hsl(240 4.8% 95.9%));
+     --gradient-admin: linear-gradient(135deg, hsl(262 83% 58%) 0%, hsl(233 84% 63%) 50%, hsl(262 100% 78%) 100%);
+
+    
 
     /* Fashion shadows */
     --shadow-fashion: 0 10px 40px -10px hsl(var(--primary) / 0.3);
     --shadow-elegant: 0 4px 20px -4px hsl(240 5.9% 10% / 0.1);
+     --shadow-admin: 0 25px 50px -12px hsl(262 83% 58% / 0.25);
+    
 
     /* Animations */
     --transition-fashion: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
