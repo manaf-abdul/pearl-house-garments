@@ -1,0 +1,36 @@
+{
+  "categories": {
+    "vsry": {
+      "id": "c279bbd2-b785-467f-a00c-c0e7a9ee3f1c",
+      "name": "vsry",
+      "subcategories": [
+        {
+          "id": "b1c2d3e4-f5a6-7b8c-9d0e-f1a2b3c4d5e6",
+          "name": "vsry-subcategory1",
+          "document_url": "https://res.cloudinary.com/dzxfe2ghf/image/upload/v1752774810/hxgsqzcdqf31k64tqlpw.jpg"
+        },
+        {
+          "id": "f7g8h9i0-j1k2-l3m4-n5o6-p7q8r9s0t1u2",
+          "name": "vsry-subcategory2",
+          "document_url": "https://res.cloudinary.com/dzxfe2ghf/image/upload/v1752774810/hxgsqzcdqf31k64tqlpw.jpg"
+        }
+      ]
+    },
+    "new category": {
+      "id": "abc80526-84f6-436c-abc2-b688d87eaf77",
+      "name": "new category",
+      "subcategories": [
+        {
+          "id": "b68812f1-b7a2-4e99-89b2-f58e69a18c6b",
+          "name": "sub category",
+          "document_url": "https://res.cloudinary.com/dzxfe2ghf/image/upload/v1753017598/iijgwbua9gp79qxee3sq.png"
+        },
+        {
+          "id": "5199b503-f5bd-4481-b6f7-df1c41520c00",
+          "name": "new subcategory",
+          "document_url": "https://res.cloudinary.com/dzxfe2ghf/image/upload/v1753017624/pu31hnkleq6ofbgpdnin.png"
+        }
+      ]
+    }
+  }
+}

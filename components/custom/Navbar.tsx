@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
+import FileDropdownWithPreview from './Dropdown';
 
 // Assuming you have a Button component, if not, you can replace it with a regular <button>
 // Example Button component (if you don't have one):
-const Button = ({ children, className, ...props }:any) => (
+const Button = ({ children, className, ...props }: any) => (
   <button className={`py-2 px-4 rounded-md font-semibold ${className}`} {...props}>
     {children}
   </button>
@@ -26,14 +27,16 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Navigation Links */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex md:items-center space-x-8">
             <a href="#home" className="text-gray-700 hover:text-blue-900 transition-colors">Home</a>
             <a href="#services" className="text-gray-700 hover:text-blue-900 transition-colors">Services</a>
             <a href="#portfolio" className="text-gray-700 hover:text-blue-900 transition-colors">Portfolio</a>
             <a href="#blog" className="text-gray-700 hover:text-blue-900 transition-colors">Blog</a>
             <a href="/pearltees" className="text-gray-700 hover:text-blue-900 transition-colors">PearlTees</a>
             <a href="#contact" className="text-gray-700 hover:text-blue-900 transition-colors">Contact</a>
+            <FileDropdownWithPreview />
           </div>
+
 
           {/* Desktop Button and Mobile Hamburger */}
           <div className="flex items-center">

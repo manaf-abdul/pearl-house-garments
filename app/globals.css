@@ -8,6 +8,14 @@
   --background-end-rgb: 255, 255, 255;
 } */
 
+.dropdown-menu {
+  anchor-name: --drop-down-anchor;
+}
+
+.preview-box{
+  position-anchor: --drop-down-anchor;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

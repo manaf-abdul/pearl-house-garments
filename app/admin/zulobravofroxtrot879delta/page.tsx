@@ -22,6 +22,7 @@ import {
   LogOut,
   Loader2
 } from "lucide-react";
+import CategoryComonent from "@/components/custom/CategoryComponent";
 
 interface MediaItem {
   public_id: string;
@@ -231,7 +232,7 @@ const Admin: React.FC = () => {
           </CardHeader>
           <CardContent>
             <div
-              className={`
+              className=  {`
                 relative border-2 border-dashed rounded-lg p-8 text-center transition-all duration-300
                 ${dragActive 
                   ? 'border-primary bg-primary/5 scale-105' 
@@ -389,6 +390,8 @@ const Admin: React.FC = () => {
             )}
           </CardContent>
         </Card>
+
+        <CategoryComonent />
       </div>
     </div>
   );
