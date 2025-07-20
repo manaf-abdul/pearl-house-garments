@@ -1,5 +1,6 @@
 import { readData, writeData } from '@/lib/database.util';
 import { v2 as cloudinary, UploadApiResponse } from 'cloudinary';
+import { log } from 'console';
 import { randomUUID } from 'crypto';
 import { NextResponse } from 'next/server';
 
@@ -13,7 +14,7 @@ export async function POST(request: Request) {
     try {        
         const formData = await request.formData();
         const file = formData.get('file') as File;
-
+        console.log("Received file:", file);
         if (!file) {
             return NextResponse.json({ error: "No file provided" }, { status: 400 });
         }
@@ -26,7 +27,7 @@ export async function POST(request: Request) {
                 cloudinary.uploader.upload_stream(
                     {
                         tags: ['category'],
-                        resource_type: 'auto',
+                        resource_type: 'raw',
                     },
                     (error, result) => {
                         if (error) return reject(error);

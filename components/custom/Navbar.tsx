@@ -79,6 +79,8 @@ const Navbar = () => {
             <a href="#blog" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-900 hover:bg-gray-50 transition-colors">Blog</a>
             <a href="/pearltees" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-900 hover:bg-gray-50 transition-colors">PearlTees</a>
             <a href="#contact" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-900 hover:bg-gray-50 transition-colors">Contact</a>
+            <FileDropdownWithPreview />
+
             <Button className="w-full bg-orange-500 hover:bg-orange-600 text-white mt-4">
               Get Free Quote
             </Button>

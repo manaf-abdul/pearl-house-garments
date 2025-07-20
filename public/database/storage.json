@@ -31,6 +31,22 @@
           "document_url": "https://res.cloudinary.com/dzxfe2ghf/image/upload/v1753017624/pu31hnkleq6ofbgpdnin.png"
         }
       ]
+    },
+    "categroy": {
+      "id": "e171bce3-8187-49c0-8572-e2bb8e0bf2bb",
+      "name": "categroy",
+      "subcategories": [
+        {
+          "id": "0e4bf719-76b3-49d4-8897-f55f6dc33a7a",
+          "name": "new stu",
+          "document_url": "https://res.cloudinary.com/dzxfe2ghf/image/upload/v1753031539/z72q4qgtaa4jowauz2xn.pdf"
+        },
+        {
+          "id": "acc04201-72d7-4abd-9f53-b3c70b665939",
+          "name": "subcategory",
+          "document_url": "https://res.cloudinary.com/dzxfe2ghf/raw/upload/v1753032229/yz4hk3xcqn4l67qcsn2i"
+        }
+      ]
     }
   }
 }

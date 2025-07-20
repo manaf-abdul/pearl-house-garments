@@ -120,7 +120,7 @@ export default function AddCategoryComponent({ handleSave }: any) {
                         <input
                             id="file-upload-2"
                             type="file"
-                            accept="image/*,video/*"
+                            accept="image/*,.pdf"
                             onChange={handleFileChange}
                             disabled={uploading}
                             className="hidden"

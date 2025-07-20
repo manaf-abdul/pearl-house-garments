@@ -20,10 +20,14 @@ const TailwindDropdown = () => {
   const [openSubMenu, setOpenSubMenu] = useState<string | null>(null);
   const [categories, setCategories] = useState<Category[]>([]);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>("");
+  const [error, setError] = useState<string | null>(null);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const [hasMounted, setHasMounted] = useState(false); // to avoid hydration issues
 
-  // Fetch categories from API
+  useEffect(() => {
+    setHasMounted(true);
+  }, []);
+
   const fetchCategories = async () => {
     setLoading(true);
     try {
@@ -31,7 +35,6 @@ const TailwindDropdown = () => {
       const res = await fetch("/api/category");
       if (!res.ok) throw new Error("Failed to fetch media");
       const data = await res.json();
-      console.log("Fetched categories:", data);
       setCategories(data);
     } catch (err: any) {
       setError(err.message);
@@ -45,7 +48,6 @@ const TailwindDropdown = () => {
     }
   };
 
-  // Handle download with browser guard
   const handleDownload = (url: string, name: string) => {
     if (typeof document === "undefined") return;
     const downloadUrl = url.replace("/upload/", "/upload/fl_attachment/");
@@ -57,7 +59,6 @@ const TailwindDropdown = () => {
     document.body.removeChild(link);
   };
 
-  // Clear timeout to prevent premature closing
   const clearCloseTimeout = () => {
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
@@ -65,7 +66,6 @@ const TailwindDropdown = () => {
     }
   };
 
-  // Delay closing the dropdown or submenu
   const delayClose = (callback: () => void) => {
     clearCloseTimeout();
     timeoutRef.current = setTimeout(callback, 200);
@@ -73,8 +73,10 @@ const TailwindDropdown = () => {
 
   useEffect(() => {
     fetchCategories();
-    return () => clearCloseTimeout(); // Cleanup on unmount
+    return () => clearCloseTimeout(); // cleanup on unmount
   }, []);
+
+  if (!hasMounted) return null; // SSR hydration fix
 
   return (
     <div
@@ -90,10 +92,7 @@ const TailwindDropdown = () => {
         });
       }}
     >
-      {/* Dropdown Trigger */}
-      <button
-        className="flex items-center text-gray-700 hover:text-blue-900 transition-colors px-3 py-2 text-sm font-medium"
-      >
+      <button className="flex items-center text-gray-700 hover:text-blue-900 transition-colors px-3 py-2 text-sm font-medium">
         Categories
         <svg
           className={`ml-2 h-5 w-5 text-gray-500 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
@@ -109,7 +108,6 @@ const TailwindDropdown = () => {
         </svg>
       </button>
 
-      {/* Dropdown Menu */}
       <div
         className={`absolute left-0 top-full w-56 rounded-lg shadow-xl bg-white border border-gray-100 z-50 transition-opacity duration-200 ${
           isOpen ? "opacity-100 visible" : "opacity-0 invisible"
@@ -120,7 +118,7 @@ const TailwindDropdown = () => {
         {!loading && !error && categories.length === 0 && (
           <div className="px-3 py-2 text-sm text-gray-500">No categories found</div>
         )}
-        {Object.entries(categories)?.map(([categoryKey, category]) => (
+        {Object.entries(categories).map(([categoryKey, category]) => (
           <div
             key={category.id}
             className="relative group"
@@ -132,10 +130,7 @@ const TailwindDropdown = () => {
               delayClose(() => setOpenSubMenu(null));
             }}
           >
-            {/* Category Item */}
-            <button
-              className="flex w-full items-center justify-between px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded transition-colors duration-150"
-            >
+            <button className="flex w-full items-center justify-between px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded transition-colors duration-150">
               {category.name}
               <svg
                 className={`h-4 w-4 text-gray-500 transition-transform duration-200 ${
@@ -153,7 +148,6 @@ const TailwindDropdown = () => {
               </svg>
             </button>
 
-            {/* Submenu */}
             <div
               className={`absolute left-full top-0 w-56 rounded-lg shadow-xl bg-white border border-gray-100 z-50 transition-opacity duration-200 ${
                 openSubMenu === category.id ? "opacity-100 visible" : "opacity-0 invisible"
