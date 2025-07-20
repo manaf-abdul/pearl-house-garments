@@ -1,5 +1,3 @@
-// components/HeroSection.tsx
-
 "use client";
 
 import React, { useState, useEffect, FC, ReactNode, useCallback } from "react";
