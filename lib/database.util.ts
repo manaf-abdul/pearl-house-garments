@@ -51,14 +51,6 @@ export async function initializeDb() {
     }
 }
 
-// Utility to get database info
-export function getDB() {
-    return {
-        filePath,
-        defaultData: { ...defaultData }, // Return a copy to prevent mutation
-    };
-}
-
 // Read data from JSON file
 export async function readData(): Promise<any> {
     try {

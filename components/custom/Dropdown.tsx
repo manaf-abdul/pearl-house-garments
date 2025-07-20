@@ -11,37 +11,6 @@ import { toast } from "@/hooks/use-toast";
 // Set up the pdfjs worker (required for react-pdf)
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
-// Sample file data (replace with your actual file URLs)
-const files = [
-    { id: "1", name: "Sample Image", type: "image", url: "https://res.cloudinary.com/dzxfe2ghf/image/upload/v1752774810/hxgsqzcdqf31k64tqlpw.jpg" },
-    { id: "2", name: "Sample PDF", type: "pdf", url: "https://www.orimi.com/pdf-test.pdf" },
-    { id: "3", name: "Another Image", type: "image", url: "https://res.cloudinary.com/dzxfe2ghf/image/upload/v1752765781/wg3ye73ehy14yhfvcfff.png" },
-];
-
-const dropdowndata = [
-    {
-        id: "1", name: "Sports wear collection", options: [
-            { id: "1", name: "Sample Image", type: "image", url: "https://res.cloudinary.com/dzxfe2ghf/image/upload/v1752774810/hxgsqzcdqf31k64tqlpw.jpg" },
-            { id: "2", name: "Sample PDF", type: "pdf", url: "https://www.orimi.com/pdf-test.pdf" },
-            { id: "3", name: "Another Image", type: "image", url: "https://res.cloudinary.com/dzxfe2ghf/image/upload/v1752765781/wg3ye73ehy14yhfvcfff.png" },
-        ]
-    },
-    {
-        id: "2", name: "Casual wear collection", options: [
-            { id: "4", name: "Casual Image", type: "image", url: "https://res.cloudinary.com/dzxfe2ghf/image/upload/v1752774810/hxgsqzcdqf31k64tqlpw.jpg" },
-            { id: "5", name: "Casual PDF", type: "pdf", url: "https://www.orimi.com/pdf-test.pdf" },
-            { id: "6", name: "Another Casual Image", type: "image", url: "https://res.cloudinary.com/dzxfe2ghf/image/upload/v1752765781/wg3ye73ehy14yhfvcfff.png" },
-        ]
-    },
-    {
-        id: "3", name: "Formal wear collection", options: [
-            { id: "7", name: "Formal Image", type: "image", url: "https://res.cloudinary.com/dzxfe2ghf/image/upload/v1752774810/hxgsqcdqf31k64tqlpw.jpg" },
-            { id: "8", name: "Formal PDF", type: "pdf", url: "https://www.orimi.com/pdf-test.pdf" },
-            { id: "9", name: "Another Formal Image", type: "image", url: "https://res.cloudinary.com/dzxfe2ghf/image/upload/v1752765781/wg3ye73ehy14yhfvcfff.png" },
-        ]
-    }
-];
-
 interface SubCategory {
     id: string;
     name: string;

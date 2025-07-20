@@ -1,10 +1,11 @@
+"use client";
+
 import { Dialog, DialogTrigger, DialogContent, DialogTitle, DialogClose, DialogOverlay, DialogPortal } from "@radix-ui/react-dialog";
 import { Button } from "@/components/ui/button"; // Assuming you have a Button component (e.g., from shadcn/ui)
 import { useState } from "react";
 import { Card } from "../ui/card";
 import { PlusIcon } from "@radix-ui/react-icons";
 import { Upload } from "lucide-react";
-import { Progress } from "@/components/ui/progress";
 
 
 export default function AddCategoryComponent({ handleSave }: any) {
