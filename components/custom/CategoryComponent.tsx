@@ -1,6 +1,6 @@
 "use client";
 
-import { Eye, Loader2 } from "lucide-react";
+import { Eye, Loader2, PlusIcon } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card";
 import { useEffect, useState } from "react";
 import { toast } from "@/hooks/use-toast";
@@ -40,7 +40,6 @@ export default function CategoryComonent() {
             const res = await fetch("/api/category");
             if (!res.ok) throw new Error("Failed to fetch media");
             const data = await res.json();
-            console.log("Fetched categories:", data);
             setCategories(data);
         } catch (err: any) {
             setError(err.message);
@@ -57,7 +56,6 @@ export default function CategoryComonent() {
     const addCategory = async (payload: Payload) => {
         setLoading(true);
         try {
-            console.log("Adding category with payload:", payload);
             const formData = new FormData();
             formData.append("file", payload['file']);
             formData.append("category", payload['category']);
@@ -67,7 +65,6 @@ export default function CategoryComonent() {
                 method: "POST",
                 body: formData,
             });
-            console.log("Response from server:", res);
 
             if (!res.ok) throw new Error("Failed to add category");
             const data = await res.json();
@@ -93,18 +90,35 @@ export default function CategoryComonent() {
         fetchCategory();
     }, []);
 
+    function AddComponent({ ...props }) {
+        return (
+            <h6 className="cursor-pointer text-base underline text-blue-600" {...props}>Add Category</h6>
+        )
+    }
+
+    function AddComponentCard({ ...props }) {
+        return (
+            <Card className="bg-white shadow-sm hover:shadow-md transition-shadow duration-200 flex items-center justify-center cursor-pointer" {...props}>
+                <PlusIcon className="ml-2 w-10 h-10" />
+            </Card>
+        )
+    }
+
     return (
         <>
             <Card className="shadow-card border-0 bg-card/80 backdrop-blur-sm">
-                <CardHeader>
-                    <CardTitle className="flex items-center gap-2">
-                        <Eye className="h-5 w-5 text-primary" />
-                        Category Manager
-                    </CardTitle>
-                    <CardDescription>
-                        Add or Remove Categories from here.
-                    </CardDescription>
-                </CardHeader>
+                <div className="flex items-center justify-between p-4">
+                    <CardHeader>
+                        <CardTitle className="flex items-center gap-2">
+                            <Eye className="h-5 w-5 text-primary" />
+                            Category Manager
+                        </CardTitle>
+                        <CardDescription>
+                            Add or Remove Categories from here.
+                        </CardDescription>
+                    </CardHeader>
+                    <AddCategoryCompnent handleSave={addCategory} AddComponent={AddComponent} />
+                </div>
                 <CardContent>
                     {loading ? (
                         <div className="flex justify-center items-center py-12">
@@ -123,19 +137,23 @@ export default function CategoryComonent() {
                                     </CardHeader>
                                     <CardContent>
                                         <ul className="space-y-2">
-                                            {category.subcategories.map((sub: SubCategory) => (
-                                                <li key={sub.id} className="flex items-center justify-between">
-                                                    <span>{sub.name}</span>
-                                                    <a href={sub.document_url} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
-                                                        View Document
-                                                    </a>
-                                                </li>
-                                            ))}
+                                            <ul className="min-h-[100px]">
+                                                {category.subcategories.map((sub: SubCategory) => (
+                                                    <li key={sub.id} className="flex items-center justify-between">
+                                                        <span>{sub.name}</span>
+                                                        <a href={sub.document_url} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+                                                            View Document
+                                                        </a>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                            <li>
+                                                <AddCategoryCompnent handleSave={addCategory} defaultCategory={category?.name} AddComponent={AddComponentCard} />
+                                            </li>
                                         </ul>
                                     </CardContent>
                                 </Card>
                             ))}
-                            <AddCategoryCompnent handleSave={addCategory} />
                         </div>
                     )}
                 </CardContent>

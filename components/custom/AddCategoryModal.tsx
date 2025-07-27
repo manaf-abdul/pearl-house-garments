@@ -2,20 +2,23 @@
 
 import { Dialog, DialogTrigger, DialogContent, DialogTitle, DialogClose, DialogOverlay, DialogPortal } from "@radix-ui/react-dialog";
 import { Button } from "@/components/ui/button"; // Assuming you have a Button component (e.g., from shadcn/ui)
-import { useState } from "react";
-import { Card } from "../ui/card";
-import { PlusIcon } from "@radix-ui/react-icons";
+import { JSX, useState } from "react";
 import { Upload } from "lucide-react";
+import FilePreview from "./FilePreview";
 
+interface AddCategoryComponentProps {
+    handleSave: (payload: { category: string; subcategory: string; file: File }) => void;
+    defaultCategory?: string;
+    AddComponent?: (props: any) => JSX.Element | Element;
+}
 
-export default function AddCategoryComponent({ handleSave }: any) {
+export default function AddCategoryComponent({ handleSave, defaultCategory, AddComponent }: AddCategoryComponentProps) {
 
-    const [category, setCategory] = useState("");
+    const [category, setCategory] = useState(defaultCategory || "");
     const [subcategory, setSubcategory] = useState("");
     const [error, setError] = useState<string | null>(null);
     const [dragActive, setDragActive] = useState(false);
     const [uploading, setUploading] = useState(false);
-    const [uploadProgress, setUploadProgress] = useState(0);
     const [file, setFile] = useState<File | null>(null);
     const [open, setOpen] = useState(false);
 
@@ -40,11 +43,14 @@ export default function AddCategoryComponent({ handleSave }: any) {
     };
 
     const handleFileChange = (event: any) => {
-        console.log("File input changed:", event);
         const file = event.target.files?.[0];
         if (!file) return;
         setFile(file);
     };
+
+    const removeFile = () => {
+        setFile(null);
+    }
 
     const save = () => {
         if (!category || !subcategory || !file) {
@@ -69,9 +75,11 @@ export default function AddCategoryComponent({ handleSave }: any) {
     return (
         <Dialog open={open} onOpenChange={setOpen}>
             <DialogTrigger asChild>
-                <Card className="bg-white shadow-sm hover:shadow-md transition-shadow duration-200 flex items-center justify-center cursor-pointer">
-                    <PlusIcon className="ml-2 w-10 h-10" />
-                </Card>
+                {
+                    AddComponent && (
+                        <AddComponent />
+                    )
+                }
             </DialogTrigger>
             <DialogPortal>
                 <DialogOverlay className="fixed inset-0 bg-black/50 z-50" />
@@ -102,47 +110,56 @@ export default function AddCategoryComponent({ handleSave }: any) {
                             />
                         </label>
                     </div>
-                    <div
-                        className={`
+                    {
+                        file ? (
+                            <div className="mt-4">
+                                <p className="text-sm font-medium">Selected File: {file.name}</p>
+                                <FilePreview uploadedFile={file} removeFile={removeFile} />
+                            </div>
+                        ) : (
+                            <div
+                                className={`
                                     relative border-2 border-dashed rounded-lg p-8 text-center transition-all duration-300 mt-4
                                     ${dragActive
-                                ? 'border-primary bg-primary/5 scale-105'
-                                : 'border-border hover:border-primary/50 hover:bg-primary/5'
-                            }
+                                        ? 'border-primary bg-primary/5 scale-105'
+                                        : 'border-border hover:border-primary/50 hover:bg-primary/5'
+                                    }
                                     ${uploading ? 'pointer-events-none opacity-50' : 'cursor-pointer'}
                                   `}
-                        onDragEnter={handleDrag}
-                        onDragLeave={handleDrag}
-                        onDragOver={handleDrag}
-                        onDrop={handleDrop}
-                        onClick={() => document.getElementById('file-upload-2')?.click()}
-                    >
-                        <input
-                            id="file-upload-2"
-                            type="file"
-                            accept="image/*,.pdf"
-                            onChange={handleFileChange}
-                            disabled={uploading}
-                            className="hidden"
-                        />
+                                onDragEnter={handleDrag}
+                                onDragLeave={handleDrag}
+                                onDragOver={handleDrag}
+                                onDrop={handleDrop}
+                                onClick={() => document.getElementById('file-upload-2')?.click()}
+                            >
+                                <input
+                                    id="file-upload-2"
+                                    type="file"
+                                    accept="image/*,.pdf"
+                                    onChange={handleFileChange}
+                                    disabled={uploading}
+                                    className="hidden"
+                                />
 
-                        <div className="space-y-4">
-                            <div className="flex justify-center">
-                                <div className="p-4 bg-gradient-primary rounded-full">
-                                    <Upload className="h-8 w-8 text-primary-foreground" />
+                                <div className="space-y-4">
+                                    <div className="flex justify-center">
+                                        <div className="p-4 bg-gradient-primary rounded-full">
+                                            <Upload className="h-8 w-8 text-primary-foreground" />
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <p className="text-lg font-medium">
+                                            {dragActive ? 'Drop your file here' : 'Drop files here or click to upload'}
+                                        </p>
+                                        <p className="text-sm text-muted-foreground mt-1">
+                                            Supports: JPG, PNG, PDF
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-
-                            <div>
-                                <p className="text-lg font-medium">
-                                    {dragActive ? 'Drop your file here' : 'Drop files here or click to upload'}
-                                </p>
-                                <p className="text-sm text-muted-foreground mt-1">
-                                    Supports: JPG, PNG, PDF
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                        )
+                    }
                     <div className="mt-6 flex justify-end gap-4">
                         <DialogClose asChild>
                             <Button variant="secondary" className="px-4 py-2 bg-gray-200 rounded-md">
