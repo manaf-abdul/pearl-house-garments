@@ -195,7 +195,7 @@ const Admin: React.FC = () => {
               </h1>
               <p className="text-muted-foreground">Manage your hero carousel content</p>
             </div>
-            <div className="ml-auto flex items-center gap-3">
+            <div className="ml-auto flex items-center gap-3 flex-wrap">
               <Badge variant="secondary" className="animate-scale-in">
                 {media.length} items
               </Badge>
