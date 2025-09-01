@@ -208,7 +208,7 @@ export default function SublimationPrintingFuture() {
             <div>
               <h4 className="text-lg font-semibold mb-4">Connect</h4>
               <ul className="space-y-2 text-gray-400">
-                <li>info@pearlhousegarments.com</li>
+                <li>pearltees@gmail.com</li>
                 <li>+971 XXX XXX XXX</li>
                 <li>Ajman, UAE</li>
               </ul>

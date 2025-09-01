@@ -134,9 +134,9 @@ const PearlTeeSlider = () => {
                                         {slide.buttonText}
                                     </Button>
                                 </Link>
-                                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-foreground">
+                                {/* <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-foreground">
                                     Learn More
-                                </Button>
+                                </Button> */}
                             </div>
                         </div>
                     </div>

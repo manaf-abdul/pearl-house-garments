@@ -166,14 +166,14 @@ const PearlTeeBestSellers = () => {
                 </h3>
 
                 {/* Price and Action */}
-                <div className="flex items-center justify-between">
+                {/* <div className="flex items-center justify-between">
                   <span className="text-2xl font-bold text-foreground">
                     AED {product.price}
                   </span>
                   <Button size="sm" className="bg-gradient-fashion hover:opacity-90">
                     Add to Cart
                   </Button>
-                </div>
+                </div> */}
               </CardContent>
             </Card>
           ))}

@@ -132,12 +132,12 @@ const PearlTeeSpecialOffers = () => {
                   </div>
                 </div>
 
-                <CardContent className="p-6">
+                {/* <CardContent className="p-6">
                   <Button className="w-full bg-gradient-fashion hover:opacity-90 text-white font-semibold">
                     <ShoppingBag className="mr-2 h-5 w-5" />
                     {offer.buttonText}
                   </Button>
-                </CardContent>
+                </CardContent> */}
               </Card>
             );
           })}

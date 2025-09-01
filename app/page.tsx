@@ -190,9 +190,18 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Sublimation Printing */}
             <div className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
-              <div className="text-center mb-6">
+              {/* <div className="text-center mb-6">
                 <div className="w-20 h-20 mx-auto bg-gradient-to-br from-pink-500 to-orange-500 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <Palette className="h-10 w-10 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-blue-900 mb-3">Sublimation Printing</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  High-speed, efficient printing for vibrant, full-color designs that last
+                </p>
+              </div> */}
+              <div className="text-center mb-6">
+                <div className="w-20 h-20 mx-auto bg-white rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-sm border border-gray-100">
+                  <Palette className="h-10 w-10 text-[#c89a70]" />
                 </div>
                 <h3 className="text-2xl font-bold text-blue-900 mb-3">Sublimation Printing</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
@@ -217,9 +226,18 @@ export default function Home() {
 
             {/* Screen Printing */}
             <div className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
-              <div className="text-center mb-6">
+              {/* <div className="text-center mb-6">
                 <div className="w-20 h-20 mx-auto bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <Paintbrush className="h-10 w-10 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-blue-900 mb-3">Screen Printing</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Meticulously crafted process creating long-lasting and visually stunning masterpieces on fabric
+                </p>
+              </div> */}
+              <div className="text-center mb-6">
+                <div className="w-20 h-20 mx-auto bg-white rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-sm border border-gray-100">
+                  <Paintbrush className="h-10 w-10 text-[#c89a70]" />
                 </div>
                 <h3 className="text-2xl font-bold text-blue-900 mb-3">Screen Printing</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
@@ -244,9 +262,18 @@ export default function Home() {
 
             {/* Heat Transfer */}
             <div className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
-              <div className="text-center mb-6">
+              {/* <div className="text-center mb-6">
                 <div className="w-20 h-20 mx-auto bg-gradient-to-br from-red-500 to-orange-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <Flame className="h-10 w-10 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-blue-900 mb-3">Heat Transfer</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Ideal for multi-color designs, ensuring sharp details and vibrant colors for your apparel
+                </p>
+              </div> */}
+              <div className="text-center mb-6">
+                <div className="w-20 h-20 mx-auto bg-white rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-sm border border-gray-100">
+                  <Flame className="h-10 w-10 text-[#c89a70]" />
                 </div>
                 <h3 className="text-2xl font-bold text-blue-900 mb-3">Heat Transfer</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
@@ -271,9 +298,18 @@ export default function Home() {
 
             {/* Custom Embroidery */}
             <div className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
-              <div className="text-center mb-6">
+              {/* <div className="text-center mb-6">
                 <div className="w-20 h-20 mx-auto bg-gradient-to-br from-teal-500 to-blue-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <Shirt className="h-10 w-10 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-blue-900 mb-3">Custom Embroidery</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Perfect for adding a premium touch to caps, polos, and uniforms with your company logo
+                </p>
+              </div> */}
+              <div className="text-center mb-6">
+                <div className="w-20 h-20 mx-auto bg-white rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-sm border border-gray-100">
+                  <Shirt className="h-10 w-10 text-[#c89a70]" />
                 </div>
                 <h3 className="text-2xl font-bold text-blue-900 mb-3">Custom Embroidery</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
@@ -298,9 +334,18 @@ export default function Home() {
 
             {/* Stitching & Sampling */}
             <div className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
-              <div className="text-center mb-6">
+              {/* <div className="text-center mb-6">
                 <div className="w-20 h-20 mx-auto bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <Scissors className="h-10 w-10 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-blue-900 mb-3">Stitching & Sampling</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Expert tailoring and sampling services with precision and care in every detail
+                </p>
+              </div> */}
+              <div className="text-center mb-6">
+                <div className="w-20 h-20 mx-auto bg-white rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-sm border border-gray-100">
+                  <Scissors className="h-10 w-10 text-[#c89a70]" />
                 </div>
                 <h3 className="text-2xl font-bold text-blue-900 mb-3">Stitching & Sampling</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
@@ -325,9 +370,18 @@ export default function Home() {
 
             {/* Sticker Printing */}
             <div className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
-              <div className="text-center mb-6">
+              {/* <div className="text-center mb-6">
                 <div className="w-20 h-20 mx-auto bg-gradient-to-br from-yellow-500 to-orange-500 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <Sparkles className="h-10 w-10 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-blue-900 mb-3">Sticker Printing</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  High-resolution, full-color sticker printing to showcase your designs effectively
+                </p>
+              </div> */}
+              <div className="text-center mb-6">
+                <div className="w-20 h-20 mx-auto bg-white rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-sm border border-gray-100">
+                  <Sparkles className="h-10 w-10 text-[#c89a70]" />
                 </div>
                 <h3 className="text-2xl font-bold text-blue-900 mb-3">Sticker Printing</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
@@ -648,7 +702,7 @@ export default function Home() {
                   <Mail className="h-6 w-6 text-blue-900 mr-3" />
                   <div>
                     <p className="font-semibold">Email</p>
-                    <p className="text-gray-600">info@pearlhousegarments.com</p>
+                    <p className="text-gray-600">pearltees@gmail.com</p>
                   </div>
                 </div>
               </div>
@@ -763,7 +817,7 @@ export default function Home() {
             <div>
               <h4 className="text-lg font-semibold mb-4">Connect</h4>
               <ul className="space-y-2 text-gray-400">
-                <li>info@pearlhousegarments.com</li>
+                <li>pearltees@gmail.com</li>
                 <li>+971 XXX XXX XXX</li>
                 <li>Ajman, UAE</li>
               </ul>

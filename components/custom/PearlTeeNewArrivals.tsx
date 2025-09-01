@@ -139,7 +139,7 @@ const PearlTeeNewArrivals = () => {
                 </div>
 
                 {/* Price */}
-                <div className="flex items-center justify-between">
+                {/* <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-2">
                     <span className="text-xl font-bold text-foreground">
                       AED {product.price}
@@ -150,12 +150,12 @@ const PearlTeeNewArrivals = () => {
                       </span>
                     )}
                   </div>
-                </div>
+                </div> */}
 
                 {/* Add to Cart Button */}
-                <Button className="w-full mt-4 bg-gradient-fashion hover:opacity-90">
+                {/* <Button className="w-full mt-4 bg-gradient-fashion hover:opacity-90">
                   Add to Cart
-                </Button>
+                </Button> */}
               </CardContent>
             </Card>
           ))}

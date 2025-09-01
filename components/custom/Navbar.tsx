@@ -42,9 +42,11 @@ const Navbar = () => {
           {/* Desktop Button and Mobile Hamburger */}
           <div className="flex items-center">
             {/* "Get Free Quote" Button - visible only on medium screens and up */}
-            <Button className="bg-orange-500 hover:bg-orange-600 text-white hidden md:block">
-              Get Free Quote
-            </Button>
+            <a href="#contact">
+              <Button className="bg-orange-500 hover:bg-orange-600 text-white hidden md:block">
+                Get Free Quote
+              </Button>
+            </a>
 
             {/* Hamburger Menu Button - visible only on mobile (below medium screens) */}
             <button

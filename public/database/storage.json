@@ -1,17 +1,17 @@
 {
   "categories": {
-    "vsry": {
+    "SPORTSWEAR": {
       "id": "c279bbd2-b785-467f-a00c-c0e7a9ee3f1c",
-      "name": "vsry",
+      "name": "SPORTSWEAR",
       "subcategories": [
         {
           "id": "b1c2d3e4-f5a6-7b8c-9d0e-f1a2b3c4d5e6",
-          "name": "vsry-subcategory1",
+          "name": "SPORTSWEAR-subcategory1",
           "document_url": "https://res.cloudinary.com/dzxfe2ghf/image/upload/v1752774810/hxgsqzcdqf31k64tqlpw.jpg"
         },
         {
           "id": "f7g8h9i0-j1k2-l3m4-n5o6-p7q8r9s0t1u2",
-          "name": "vsry-subcategory2",
+          "name": "SPORTSWEAR-subcategory2",
           "document_url": "https://res.cloudinary.com/dzxfe2ghf/image/upload/v1752774810/hxgsqzcdqf31k64tqlpw.jpg"
         },
         {
@@ -21,34 +21,34 @@
         }
       ]
     },
-    "new category": {
+    "PROMOTIONAL ITEMS": {
       "id": "abc80526-84f6-436c-abc2-b688d87eaf77",
-      "name": "new category",
+      "name": "PROMOTIONAL ITEMS",
       "subcategories": [
         {
           "id": "b68812f1-b7a2-4e99-89b2-f58e69a18c6b",
-          "name": "sub category",
+          "name": "PROMOTIONAL ITEMS-sub category 1",
           "document_url": "https://res.cloudinary.com/dzxfe2ghf/image/upload/v1753017598/iijgwbua9gp79qxee3sq.png"
         },
         {
           "id": "5199b503-f5bd-4481-b6f7-df1c41520c00",
-          "name": "new subcategory",
+          "name": "PROMOTIONAL ITEMS-sub category 1",
           "document_url": "https://res.cloudinary.com/dzxfe2ghf/image/upload/v1753017624/pu31hnkleq6ofbgpdnin.png"
         }
       ]
     },
-    "categroy": {
+    "SAFETY UNIFORMS": {
       "id": "e171bce3-8187-49c0-8572-e2bb8e0bf2bb",
-      "name": "categroy",
+      "name": "SAFETY UNIFORMS",
       "subcategories": [
         {
           "id": "0e4bf719-76b3-49d4-8897-f55f6dc33a7a",
-          "name": "new stu",
+          "name": "SAFETY UNIFORMS -sub-1",
           "document_url": "https://res.cloudinary.com/dzxfe2ghf/image/upload/v1753031539/z72q4qgtaa4jowauz2xn.pdf"
         },
         {
           "id": "acc04201-72d7-4abd-9f53-b3c70b665939",
-          "name": "subcategory",
+          "name": "SAFETY UNIFORMS-subcategory-2",
           "document_url": "https://res.cloudinary.com/dzxfe2ghf/raw/upload/v1753032229/yz4hk3xcqn4l67qcsn2i"
         }
       ]

@@ -6,11 +6,11 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
-import { 
-  MapPin, 
-  Phone, 
-  Mail, 
-  Clock, 
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Clock,
   Send,
   Instagram,
   Facebook,
@@ -49,16 +49,23 @@ const LocationContact = () => {
     {
       icon: Mail,
       title: "Email",
-      content: "info@pearltees.ae",
+      content: "pearltees@gmail.com",
       details: "We reply within 2 hours"
     },
     {
       icon: Clock,
-      title: "Business Hours",
-      content: "Mon - Sat: 9:00 AM - 8:00 PM",
-      details: "Sunday: 10:00 AM - 6:00 PM"
+      title: "Pearl House Office — Business Hours",
+      content: "9:00 AM - 6:00 PM",
+      details: "Mon - Sat"
+    },
+    {
+      icon: Clock,
+      title: "PearlTees Store — Business Hours",
+      content: "10:00 AM - 10:00 PM",
+      details: "Mon - Sun (Open daily — no days off)"
     }
   ];
+
 
   const socialLinks = [
     { icon: Instagram, name: "Instagram", link: "#", color: "from-pink-500 to-orange-500" },
@@ -159,62 +166,62 @@ const LocationContact = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <Label htmlFor="name">Full Name *</Label>
-                    <Input 
+                    <Input
                       id="name"
                       value={formData.name}
-                      onChange={(e) => setFormData({...formData, name: e.target.value})}
+                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       required
                       className="mt-1"
                     />
                   </div>
                   <div>
                     <Label htmlFor="phone">Phone Number</Label>
-                    <Input 
+                    <Input
                       id="phone"
                       value={formData.phone}
-                      onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       className="mt-1"
                     />
                   </div>
                 </div>
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <Label htmlFor="email">Email Address *</Label>
-                    <Input 
+                    <Input
                       id="email"
                       type="email"
                       value={formData.email}
-                      onChange={(e) => setFormData({...formData, email: e.target.value})}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       required
                       className="mt-1"
                     />
                   </div>
                   <div>
                     <Label htmlFor="subject">Subject</Label>
-                    <Input 
+                    <Input
                       id="subject"
                       value={formData.subject}
-                      onChange={(e) => setFormData({...formData, subject: e.target.value})}
+                      onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                       placeholder="e.g., Custom Order Inquiry"
                       className="mt-1"
                     />
                   </div>
                 </div>
-                
+
                 <div>
                   <Label htmlFor="message">Message *</Label>
-                  <Textarea 
+                  <Textarea
                     id="message"
                     rows={5}
                     value={formData.message}
-                    onChange={(e) => setFormData({...formData, message: e.target.value})}
+                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     placeholder="Tell us about your requirements..."
                     required
                     className="mt-1 resize-none"
                   />
                 </div>
-                
+
                 <Button type="submit" className="w-full bg-gradient-fashion hover:opacity-90">
                   <Send className="mr-2 h-5 w-5" />
                   Send Message

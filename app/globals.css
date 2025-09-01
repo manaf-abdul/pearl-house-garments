@@ -206,3 +206,5 @@ body>nextjs-portal {
 .animation-delay-3s {
   animation-delay: 3s;
 }
+
+html { scroll-behavior: smooth; }

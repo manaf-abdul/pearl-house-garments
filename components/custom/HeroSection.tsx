@@ -155,12 +155,16 @@ const HeroSection: FC = () => {
           className="flex flex-col sm:flex-row gap-4 justify-center"
           variants={itemVariants}
         >
-          <Button className="bg-orange-500 hover:bg-orange-600 text-white">
-            Get a Free Quote
-          </Button>
-          <Button className="bg-white/10 border-white text-white hover:bg-white hover:text-blue-900">
-            View Our Work
-          </Button>
+          <a href="#contact">
+            <Button className="bg-orange-500 hover:bg-orange-600 text-white">
+              Get a Free Quote
+            </Button>
+          </a>
+          <a href="#services">
+            <Button className="bg-white/10 border-white text-white hover:bg-white hover:text-blue-900">
+              View Our Work
+            </Button>
+          </a>
         </motion.div>
       </motion.div>
     </section>
