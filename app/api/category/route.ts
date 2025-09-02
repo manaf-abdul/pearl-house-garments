@@ -134,7 +134,7 @@ export async function POST(request: Request) {
           .upload_stream(
             {
               tags: ["category"],
-              resource_type: "raw",
+              resource_type: "auto",
             },
             (error, result) => {
               if (error) return reject(error);
